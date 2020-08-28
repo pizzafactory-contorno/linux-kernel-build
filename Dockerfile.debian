@@ -1,0 +1,8 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
+
+RUN sudo apt-get update && sudo apt-get upgrade -y && \
+    sudo apt-get install -y qemu gcc-arm-linux-gnueabi build-essential bison flex libncurses-dev libelf-dev && \
+    sudo apt-get clean && \
+    sudo rm -rf /var/lib/apt/lists/*
