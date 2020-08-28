@@ -1,0 +1,5 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
+
+RUN sudo apk add --update --no-cache alpine-sdk
